@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // RUTAS PRINCIPALES PAGINA WEB
+// ESTOY EN LA RAMA 2 QUE ES MIA
 Route::get('/', function () {
     return view('welcome');
 });
