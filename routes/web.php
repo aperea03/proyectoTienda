@@ -12,8 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// RUTAS PRINCIPALES PAGINA WEB
-// ESTOY EN LA RAMA 2 QUE ES MIA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+// RUTAS PRINCIPALES PAGINA WEB ALBERTO
 Route::get('/', function () {
     return view('welcome');
 });
