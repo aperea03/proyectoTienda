@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 // RUTAS PRINCIPALES PAGINA WEB ALBERTO
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
