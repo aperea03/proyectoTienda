@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Vapps</title>
+    <link rel="icon" type="image/x-icon" href="{{URL::asset('images/logo.png')}}" />
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -17,12 +18,16 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
+    <!-- LOGO PRINCIPAL -->
+    <div class="d-flex justify-content-center logo">
+        <a href="{{ url('/') }}">
+          <!-- <-----REDIRECCION -->
+          <img src="{{URL::asset('images/full_logo.png')}}" alt="Logo_vapps" class="img-fluid" />
+        </a>
+      </div>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Vapps
-                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -30,7 +35,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}">{{ __('Inicio') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}">{{ __('Shishas') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}">{{ __('Pods') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}">{{ __('Accesorios') }}</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -45,7 +61,7 @@
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrate') }}</a>
                                 </li>
                             @endif
                         @else
@@ -76,5 +92,11 @@
             @yield('content')
         </main>
     </div>
+    <!-- FOOTER -->
+    <div class="bg-dark text-white">
+        <p class="text-center p-4 m-0">
+          &copy; 2023 Vapps Spain. Todos los derechos reservados.
+        </p>
+      </div>
 </body>
 </html>
