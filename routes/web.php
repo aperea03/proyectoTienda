@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ListadoProduct;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// RUTAS PRINCIPALES PAGINA WEB ALBERTO
-Route::get('/', function () {
-    return view('home');
-});
+// RUTAS PRINCIPALES PAGINA WEB
+Route::get('/', [ListadoProduct::class,'index'])->name('inicio');
+
+Route::get('/productos', [ListadoProduct::class,'index'])->name('inicio');
+
+Route::get('/productos/{id}',[ListadoProduct::class, 'show'])->name('product.show')->middleware("auth");
 
 Auth::routes();
 
