@@ -8,7 +8,7 @@ use App\Models\Producto;
 class ListadoProduct extends Controller
 {
     public function index(){
-        $productos = Producto::orderBy('id','asc')->paginate(8);
+        $productos = Producto::orderBy('id','asc')->paginate(12);
         // $cursos = Curso::paginate();
         return view('home', compact('productos'));
     }
