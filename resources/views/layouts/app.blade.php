@@ -74,12 +74,28 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        <img src="{{URL::asset('images/box-arrow-left.svg')}}">
+                                        {{ __('Cerrar Sesion') }}
                                     </a>
-
+                                    <a href="" class="dropdown-item"><img src="{{URL::asset('images/pencil.svg')}}"> Editar</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
+                                </div>
+                            </li>
+                            {{-- Dropdown carrito --}}
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="badge badge-pill badge-dark">
+                                        <i class="fa fa-shopping-cart"></i> {{ \Cart::getTotalQuantity()}}
+                                    </span>
+                                </a>
+            
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="width: 450px; padding: 0px; border-color: #9DA0A2">
+                                    <ul class="list-group" style="margin: 20px;">
+                                        @include('partials.cart-drop')
+                                    </ul>
+            
                                 </div>
                             </li>
                         @endguest
@@ -97,6 +113,12 @@
         <p class="text-center p-4 m-0">
           &copy; 2023 Vapps Spain. Todos los derechos reservados.
         </p>
+        <div class="container">
+            <i class="fa fa-apple" id="apple"></i>
+            <i class="fa fa-twitter" id="twitter"></i>
+            <i class="fa fa-github-square github" id="github"></i>
+            <i class="fa fa-facebook-square" id="facebook"></i>
+        </div>
       </div>
 </body>
 </html>
