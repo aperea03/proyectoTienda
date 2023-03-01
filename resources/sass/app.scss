@@ -35,6 +35,9 @@
 }
 body{
     font-family: var(--font1);
+    background-image: url('fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 // LOGO Y LINKS
 .logo{
