@@ -53,4 +53,10 @@ class CartController extends Controller
         session()->flash('success', 'All Item Cart Clear Successfully !');
         return redirect()->route('inicio');
     }
+    public function checkout()
+    {
+        \Cart::clear();
+        // return redirect()->route('inicio');
+        return view('checkout');
+    }
 }

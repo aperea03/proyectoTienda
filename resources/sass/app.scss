@@ -36,7 +36,7 @@
 body{
     font-family: var(--font1);
 }
-// LOGO Y LINKS
+// LOGO Y LINKS E ICONOS
 .logo{
     width: 20%;
     max-width: 200px;
@@ -65,7 +65,10 @@ body{
         border-top-left-radius: 10px;
     }
 }
-
+.iconos{
+    width: 50px;
+    margin: 0 1rem;
+}
 
 // BUTTON GENERAL
 .btn-archive {
@@ -85,7 +88,10 @@ body{
         box-shadow: 0 0 0 0.25rem var(--bg-button-focus);
     }
 }
-
+.addcart{
+    width: 70%;
+    margin: auto;
+}
 .posts-section {
     background: var(--bg-post-section);
     font-family: var(--font1);

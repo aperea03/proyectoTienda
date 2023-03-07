@@ -7,7 +7,7 @@
                 </div>
                 <div class="col-lg-6">
                     <b>{{$item->name}}</b>
-                    <br><small>Qty: {{$item->quantity}}</small>
+                    <br><small>Cant: {{$item->quantity}}</small>
                 </div>
                 <div class="col-lg-3">
                     <p>{{ \Cart::get($item->id)->getPriceSum() }}€</p>
@@ -25,7 +25,7 @@
             <div class="col-lg-2">
                 <form action="{{ route('cart.clear') }}" method="POST">
                     {{ csrf_field() }}
-                    <button class="btn btn-secondary btn-sm"><i class="fa fa-trash"></i></button>
+                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
                 </form>
             </div>
         </div>
@@ -40,5 +40,5 @@
         </a>
     </div>
 @else
-    <li class="list-group-item">El carrito está vacio.</li>
+    <li class="list-group-item text-danger">El carrito está vacio.</li>
 @endif

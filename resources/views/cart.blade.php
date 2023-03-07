@@ -38,9 +38,9 @@
             <div class="col-lg-7">
                 <br>
                 @if(\Cart::getTotalQuantity()>0)
-                    <h4>{{ \Cart::getTotalQuantity()}} Product(s) In Your Cart</h4><br>
+                    <h4>{{ \Cart::getTotalQuantity()}} Producto(s) en tu carrito</h4><br>
                 @else
-                    <h4>No Product(s) In Your Cart</h4><br>
+                    <h4>No hay producto(s) en el carrito</h4><br>
                     <a href="{{ url('/') }}" class="btn btn-dark">Continue Shopping</a>
                 @endif
 
@@ -52,8 +52,8 @@
                         <div class="col-lg-5">
                             <p>
                                 <b><p>{{ $item->name }}</p></b>
-                                <b>Price: </b>${{ $item->price }}<br>
-                                <b>Sub Total: </b>${{ \Cart::get($item->id)->getPriceSum() }}<br>
+                                <b>Precio: </b>{{ $item->price }} €<br>
+                                <b>Sub Total: </b>{{ \Cart::get($item->id)->getPriceSum() }} €<br>
                                 {{--<b>With Discount: </b>${{ \Cart::get($item->id)->getPriceSumWithConditions() }}--}}
                             </p>
                         </div>
@@ -65,13 +65,13 @@
                                         <input type="hidden" value="{{ $item->id}}" id="id" name="id">
                                         <input type="number" class="form-control form-control-sm" value="{{ $item->quantity }}"
                                                id="quantity" name="quantity" style="width: 70px; margin-right: 10px;" min="1">
-                                        <button class="btn btn-secondary btn-sm" style="margin-right: 25px;"><i class="fa fa-edit"></i></button>
+                                        <button class="btn btn-secondary btn-sm mt-2 mb-2"><i class="fa fa-edit"></i></button>
                                     </div>
                                 </form>
                                 <form action="{{ route('cart.remove') }}" method="POST">
                                     {{ csrf_field() }}
                                     <input type="hidden" value="{{ $item->id }}" id="id" name="id">
-                                    <button class="btn btn-dark btn-sm" style="margin-right: 10px;"><i class="fa fa-trash"></i></button>
+                                    <button class="btn btn-danger btn-sm" style="margin-right: 10px;"><i class="fa fa-trash"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -81,19 +81,22 @@
                 @if(count($cartCollection)>0)
                     <form action="{{ route('cart.clear') }}" method="POST">
                         {{ csrf_field() }}
-                        <button class="btn btn-secondary btn-md">Clear Cart</button>
+                        <button class="btn btn-secondary btn-md mb-4">VACIAR</button>
                     </form>
                 @endif
             </div>
             @if(count($cartCollection)>0)
-                <div class="col-lg-5">
-                    <div class="card">
+                <div class="col-lg-5 d-flex flex-column">
+                    <div class="card text-center">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><b>Total: </b>${{ \Cart::getTotal() }}</li>
+                            <li class="list-group-item"><b>Total: </b>{{ \Cart::getTotal() }} €</li>
                         </ul>
                     </div>
-                    <br><a href="{{ url('/') }}" class="btn btn-dark">Continue Shopping</a>
-                    <a href="/checkout" class="btn btn-success">Proceed To Checkout</a>
+                    <br><a href="{{ url('/') }}" class="btn btn-dark">Continue comprando</a>
+                    <form action="{{route('checkout')}}" method="POST">
+                        {{ csrf_field() }}
+                        <button class="btn btn-success btn-md mt-4" style="width: 100%;">Checkout</button>
+                    </form>
                 </div>
             @endif
         </div>
