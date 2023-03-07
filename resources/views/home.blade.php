@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- CAROUSEL -->
-  <section id="posts" class="posts-section">
+  <section id="posts" class="posts-section shadow-lg border-5 border-top border-bottom">
     <div class="container-lg py-5">
       <div class="container-lg px-0">
         <div class="row">
@@ -152,7 +152,7 @@
         <div class="row">
             @foreach ($productos as $producto)
             <a href="{{route('product.show',$producto->id)}}" class="col-lg-3 col-md-4 mb-3 " id="link">
-                <div class="fproduct border border-secondary">
+                <div class="fproduct border border-2">
                     <img src="{{$producto->image}}" alt="" class="img-fluid" data-bs-toggle="modal" data-bs-target="#modal1" id="modal-imagen">
                     <h3>{{$producto->name}}</h3>
                     <p class="text-success"><strong>{{$producto->precio}}€</strong></p>
