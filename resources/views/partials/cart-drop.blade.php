@@ -35,9 +35,6 @@
         <a class="btn btn-dark btn-sm btn-block" href="{{ route('cart.index') }}">
             CARRITO <i class="fa fa-arrow-right"></i>
         </a>
-        <a class="btn btn-dark btn-sm btn-block mt-2" href="">
-            COMPRAR <i class="fa fa-arrow-right"></i>
-        </a>
     </div>
 @else
     <li class="list-group-item text-danger">El carrito está vacio.</li>

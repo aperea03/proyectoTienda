@@ -45,24 +45,27 @@
                   <div class="col-md-6 p-3 p-md-1">
                     <div class="container post-body">
                       <h2>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        Pod recargable UWELL KOKO prime kit
                       </h2>
                       <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>&nbsp; Rome, 28
-                        September 1997
+                        &nbsp; <h2 class="text-success">27,95 €</h2><br><br>
+                        <p>El Koko Prime tiene una batería incorporada de 690mAh de mayor capacidad. 
+                          El kit también tiene un indicador LED de tres colores. 
+                          Podrás conocer fácilmente los niveles de la batería a través de un indicador luminoso. 
+                        </p>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6 order-first order-md-last px-0">
                     <div class="text-img-over">
                       <img
-                        src="https://source.unsplash.com/user/erondu/800x600"
+                        src="{{URL::asset('images/carousel1.PNG')}}"
                         class="card-img-top"
-                        alt="..."
+                        alt="Pod"
                       />
                       <div class="overlay">
                         <div class="social-hover">
-                          <a href="#"><i class="fas fa-share-alt"></i></a>
+                          <a href="https://www.instagram.com/"><i class="fas fa-share-alt"></i></a>
                         </div>
                       </div>
                     </div>
@@ -76,24 +79,26 @@
                   <div class="col-md-6 p-3 p-md-1">
                     <div class="container post-body">
                       <h2>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        TORTUGA FANCY RED
                       </h2>
                       <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>&nbsp; Rome, 28
-                        September 1997
+                        &nbsp; <h2 class="text-success">194,95 €</h2><br><br>
+                        <p>Cachimba de estilo moderno y fabricada en acero.<br>
+                          Su cuerpo esta detallado con motivos piratas y tiene una purga integrada horizontal.
+                        </p>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6 order-first order-md-last px-0">
                     <div class="text-img-over">
                       <img
-                        src="https://source.unsplash.com/user/nasa/800x600"
+                        src="{{URL::asset('images/carousel2.PNG')}}"
                         class="card-img-top"
-                        alt="..."
+                        alt="Shisha"
                       />
                       <div class="overlay">
                         <div class="social-hover">
-                          <a href="#"><i class="fas fa-share-alt"></i></a>
+                          <a href="https://www.instagram.com/"><i class="fas fa-share-alt"></i></a>
                         </div>
                       </div>
                     </div>
@@ -107,24 +112,27 @@
                   <div class="col-md-6 p-3 p-md-1">
                     <div class="container post-body">
                       <h2>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        ALPACA BOWL SYMPHONY
                       </h2>
                       <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>&nbsp; Rome, 28
-                        September 1997
+                        &nbsp; <h2 class="text-success">34,95 €</h2><br><br>
+                        <p>Os presentamos el modelo SYMPHONY de la prestigiosa marca americana Alpaca Bowls, 
+                          una cazoleta <br> fabricada en el mejor barro blanco poroso y diseñada para dar el máximo rendimiento, 
+                          sin duda un articulo que debe estar en tu coleccion.
+                        </p>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6 order-first order-md-last px-0">
                     <div class="text-img-over">
                       <img
-                        src="https://source.unsplash.com/user/jlondonbaker/800x600"
+                        src="{{URL::asset('images/carousel3.PNG')}}"
                         class="card-img-top"
-                        alt="..."
+                        alt="cazoleta"
                       />
                       <div class="overlay">
                         <div class="social-hover">
-                          <a href="#"><i class="fas fa-share-alt"></i></a>
+                          <a href="https://www.instagram.com/"><i class="fas fa-share-alt"></i></a>
                         </div>
                       </div>
                     </div>
@@ -147,7 +155,7 @@
                 <div class="fproduct">
                     <img src="{{$producto->image}}" alt="" class="img-fluid" data-bs-toggle="modal" data-bs-target="#modal1" id="modal-imagen">
                     <h3>{{$producto->name}}</h3>
-                    <p>{{$producto->precio}}€</p>
+                    <p class="text-success"><strong>{{$producto->precio}}€</strong></p>
                     <p>{{$producto->categoria}}</p>
                 </div>
             </a>

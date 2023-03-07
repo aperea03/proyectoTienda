@@ -95,7 +95,7 @@
                     <br><a href="{{ url('/') }}" class="btn btn-dark">Continue comprando</a>
                     <form action="{{route('checkout')}}" method="POST">
                         {{ csrf_field() }}
-                        <button class="btn btn-success btn-md mt-4" style="width: 100%;">Checkout</button>
+                        <button class="btn btn-success btn-md mt-4" style="width: 100%;">COMPRAR</button>
                     </form>
                 </div>
             @endif
