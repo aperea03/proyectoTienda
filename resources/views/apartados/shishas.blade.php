@@ -1,8 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <!-- MAIN PRODUCTOS -->
+    {{-- BUSQUEDA --}}
+    <div class="container pb-3 border-bottom">
+        <h2 class="text-center pb-3">BUSCA LO QUE ENCUENTRAS AQUÍ</h2>
+        <div class="input-group rounded">
+            <input type="search" class="form-control rounded" placeholder="BUSCAR ..." aria-label="Search" aria-describedby="search-addon" />
+            <span class="input-group-text border-0" id="search-addon">
+              <i class="fas fa-search"></i>
+            </span>
+        </div>
+    <!-- CARD PRODUCTO -->
     <section class="container-xl py-5">
         <h2 class="title-section text-center mb-5">Shishas</h2>
         <div class="row">

@@ -10,7 +10,7 @@
     <title>Vapps</title>
     <link rel="icon" type="image/x-icon" href="{{URL::asset('images/logo.png')}}" />
 
-    <!-- Fonts -->
+    <!-- Fuentes -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
@@ -33,7 +33,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
+                    <!-- Lado izquierdo Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/') }}">{{ __('Inicio') }}</a>
@@ -49,7 +49,7 @@
                         </li>
                     </ul>
 
-                    <!-- Right Side Of Navbar -->
+                    <!-- Lado derecho Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
@@ -71,12 +71,12 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <!-- Button trigger modal 1 -->
+                                    <!-- BOTON MODAL 1 -->
                                     <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <img src="{{URL::asset('images/box-arrow-left.svg')}}">
                                         {{ __('Cerrar Sesion') }}
                                     </button>
-                                    <!-- Button trigger modal 2 -->
+                                    <!-- BOTON MODAL 2 -->
                                     <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                                         <img src="{{URL::asset('images/x-lg.svg')}}"> 
                                         Eliminar Cuenta

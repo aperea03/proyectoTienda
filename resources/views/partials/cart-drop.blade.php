@@ -1,6 +1,8 @@
 @if(count(\Cart::getContent()) > 0)
     @foreach(\Cart::getContent() as $item)
+    {{-- DROPDOWN CARRITO --}}
         <li class="list-group-item">
+            {{-- Tarjeta de producto --}}
             <div class="row">
                 <div class="col-lg-3">
                     <img src="{{ $item->attributes->image }}" style="width: 50px; height: 50px;">
@@ -17,6 +19,7 @@
         </li>
     @endforeach
     <br>
+    {{-- Lista de botones --}}
     <li class="list-group-item">
         <div class="row">
             <div class="col-lg-10">

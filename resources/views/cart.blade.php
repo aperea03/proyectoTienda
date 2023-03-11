@@ -1,13 +1,16 @@
 @extends('layouts.app')
 
+{{-- PLANTILLA DE CARRITO --}}
 @section('content')
     <div class="container" style="margin-top: 80px">
+        {{-- Barra navegacion  --}}
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumsb-item"><a href="{{ url('/') }}">Tienda/</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Carrito</li>
             </ol>
         </nav>
+        {{-- Controles de inicio de sesion --}}
         @if(session()->has('success_msg'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {{ session()->get('success_msg') }}
@@ -34,6 +37,8 @@
                 </div>
             @endforeach
         @endif
+
+        {{-- Contenido carrito principal --}}
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <br>
@@ -44,6 +49,7 @@
                     <a href="{{ url('/') }}" class="btn btn-dark">Continue Shopping</a>
                 @endif
 
+                {{-- Listado de productos añadidos --}}
                 @foreach($cartCollection as $item)
                     <div class="row">
                         <div class="col-lg-3">
@@ -54,9 +60,9 @@
                                 <b><p>{{ $item->name }}</p></b>
                                 <b>Precio: </b>{{ $item->price }} €<br>
                                 <b>Sub Total: </b>{{ \Cart::get($item->id)->getPriceSum() }} €<br>
-                                {{--<b>With Discount: </b>${{ \Cart::get($item->id)->getPriceSumWithConditions() }}--}}
                             </p>
                         </div>
+                        {{-- Control de cantidad del producto --}}
                         <div class="col-lg-4">
                             <div class="row">
                                 <form action="{{ route('cart.update') }}" method="POST">
@@ -78,6 +84,7 @@
                     </div>
                     <hr>
                 @endforeach
+                {{-- Boton vaciado carrito --}}
                 @if(count($cartCollection)>0)
                     <form action="{{ route('cart.clear') }}" method="POST">
                         {{ csrf_field() }}
@@ -85,6 +92,7 @@
                     </form>
                 @endif
             </div>
+            {{-- Contenedor derecho del carrito --}}
             @if(count($cartCollection)>0)
                 <div class="col-lg-5 d-flex flex-column">
                     <div class="card text-center">

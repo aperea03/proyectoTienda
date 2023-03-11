@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <!-- CAROUSEL -->
   <section id="posts" class="posts-section shadow-lg border-5 border-top border-bottom">
     <div class="container-lg py-5">
@@ -146,9 +147,19 @@
     </div>
   </section>
 
-    <!-- MAIN PRODUCTOS -->
+    <!-- GENERACIÓN CARDS DE PRODUCTOS -->
     <section class="container-xl py-5">
-        <h2 class="title-section text-center my-5">Nuestros productos</h2>
+        {{-- BUSQUEDA --}}
+        <div class="container pb-3 border-bottom">
+          <h2 class="text-center pb-3">BUSCA LO QUE ENCUENTRAS AQUÍ</h2>
+          <div class="input-group rounded">
+              <input type="search" class="form-control rounded" placeholder="BUSCAR ..." aria-label="Search" aria-describedby="search-addon" />
+              <span class="input-group-text border-0" id="search-addon">
+                <i class="fas fa-search"></i>
+              </span>
+          </div>
+      </div>
+        <h2 class="text-center my-5">Últimos productos</h2>
         <div class="row">
             @foreach ($productos as $producto)
             <a href="{{route('product.show',$producto->id)}}" class="col-lg-3 col-md-4 mb-3 " id="link">

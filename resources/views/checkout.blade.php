@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    {{-- Contenedor central de compra --}}
     <div class="row">
         <div class="alert alert-info col-12 text-center" role="alert">
             ¡ COMPRA REALIZADA !
