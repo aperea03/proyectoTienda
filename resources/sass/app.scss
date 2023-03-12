@@ -11,30 +11,8 @@
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
-:root {
-    /* GENERAL FONT */
-    --font1: "Titillium Web", sans-serif;
-    /* GENERAL COLOR */
-    --bg-col-1: #6c0909;
-    --bg-col-3: #fff;
-    --tx-color-1: #fff;
-    --tx-color-2: #000;
-    
-    // post section
-    --tx-post-section-title: #212529;
-    --bg-post-section: rgb(237, 237, 237);
-
-    --bg-post-title: #fff;
-    --tx-post-title: #212529;
-    --bg-post-image-overlay: #af000065;  
-
-
-    //button arrow & archive
-    --tx-button: #fff;
-    --bg-button: #af0000;
-}
 body{
-    font-family: var(--font1);
+    font-family: $font1;
 }
 // LOGO Y LINKS E ICONOS
 .logo{
@@ -56,7 +34,7 @@ body{
 .fproduct{
     text-align: center;
     border-radius: 10px;
-    background-color: var(--bg-post-section);
+    background-color: $bg-post-section;
     transition:300ms ease all;
     &:hover{
         box-shadow: 0px 0px 10px;
@@ -64,7 +42,7 @@ body{
     }
     h3{
         font-weight: 700;
-        color: var(--tx-post-section-title);
+        color: $tx-post-section-title;
     }
     img{
         border-top-right-radius: 10px;
@@ -78,20 +56,20 @@ body{
 
 // BUTTON GENERAL
 .btn-archive {
-    color: var(--tx-button);
-    background: var(--bg-button);
-    border-color: var(--bg-button-border);
+    color: $tx-button;
+    background: $bg-button;
+    border-color: $bg-button-border;
 
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s;
     &:hover {
-        color: var(--tx-button-hover);
-        background-color: var(--bg-button-hover);
-        border-color: var(--bg-button-hover);
+        color: $tx-button-hover;
+        background-color: $bg-button-hover;
+        border-color: $bg-button-hover;
     }
     &:focus {
-        -webkit-box-shadow: 0 0 0 0.25rem var(--bg-button-focus);
-        box-shadow: 0 0 0 0.25rem var(--bg-button-focus);
+        -webkit-box-shadow: 0 0 0 0.25rem $bg-button-focus;
+        box-shadow: 0 0 0 0.25rem $bg-button-focus;
     }
 }
 .addcart{
@@ -99,18 +77,18 @@ body{
     margin: auto;
 }
 .posts-section {
-    background: var(--bg-post-section);
-    font-family: var(--font1);
+    background: $bg-post-section;
+    font-family: $font1;
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s;
     .title-section {
         font-weight: 700;
         text-transform: uppercase;
-        color: var(--tx-post-section-title);
+        color: $tx-post-section-title;
     }
     .bg-card {
-        background: var(--bg-post-title);
-        color: var(--tx-post-title);
+        background: $bg-post-title;
+        color: $tx-post-title;
     }
     .post-body h2 {
         font-weight: 600;
@@ -139,7 +117,7 @@ body{
             width: 100%;
             opacity: 0;
             transition: 0.5s ease;
-            background: var(--bg-post-image-overlay);
+            background: $bg-post-image-overlay;
         }
 
         &:hover .overlay {
@@ -148,7 +126,7 @@ body{
     }
 
     .social-hover {
-        color: var(--tx-color-1);
+        color: $tx-color-1;
         font-size: 40px;
         position: absolute;
         top: 50%;
@@ -160,10 +138,10 @@ body{
 
 
         .fa-share-alt {
-            color: var(--tx-color-1);
+            color: $tx-color-1;
 
             &:hover {
-                color: var(--tx-color-1);
+                color: $tx-color-1;
             }
         }
     }

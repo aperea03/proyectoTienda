@@ -64,7 +64,7 @@
                         </div>
                         {{-- Control de cantidad del producto --}}
                         <div class="col-lg-4">
-                            <div class="row">
+                            <div class="row m-2">
                                 <form action="{{ route('cart.update') }}" method="POST">
                                     {{ csrf_field() }}
                                     <div class="form-group row">

@@ -1,7 +1,25 @@
-// Body
-$body-bg: #f8fafc;
 
 // Typography
+$font1: "Titillium Web", sans-serif;
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+/* general color */
+$bg-col-1: #6c0909;
+$bg-col-3: #fff;
+$tx-color-1: #fff;
+$tx-color-2: #000;
+$body-bg: #f8fafc;
+
+// post section
+$tx-post-section-title: #212529;
+$bg-post-section: rgb(237, 237, 237);
+
+$bg-post-title: #fff;
+$tx-post-title: #212529;
+$bg-post-image-overlay: #af000065;  
+
+//button arrow & archive
+$tx-button: #fff;
+$bg-button: #af0000;
