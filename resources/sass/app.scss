@@ -58,18 +58,18 @@ body{
 .btn-archive {
     color: $tx-button;
     background: $bg-button;
-    border-color: $bg-button-border;
+    border-color: $bg-button;
 
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s;
     &:hover {
-        color: $tx-button-hover;
-        background-color: $bg-button-hover;
-        border-color: $bg-button-hover;
+        color: $tx-button;
+        background-color: $bg-button;
+        border-color: $bg-button;
     }
     &:focus {
-        -webkit-box-shadow: 0 0 0 0.25rem $bg-button-focus;
-        box-shadow: 0 0 0 0.25rem $bg-button-focus;
+        -webkit-box-shadow: 0 0 0 0.25rem $bg-button;
+        box-shadow: 0 0 0 0.25rem $bg-button;
     }
 }
 .addcart{
